@@ -1,0 +1,277 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="asset/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="asset/download.svg">
+            <nav>
+                <li class="active"><a href="#events">Current events</a></li>
+                <li><a href="#create">Create new event</a></li>
+                <li><a href="#contact us">contact us</a></li>
+            </nav>
+        </header>
+        <section class="content">
+            <div class="container">
+                <h1 class="gradient-text">IEEE Event Management Website</h1>
+                <br>
+                <br>
+                <br>
+                <a class="button"  href="https://ieeeajce.org/">
+                    REGISTER
+                </a>
+                <br>
+                <br>
+                <p>Register now to become part of IEEE</p>
+            </div>
+        </section>
+        <hr>
+        <section class="subscribe">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      }
+      h1 {
+      margin: 0 0 20px;
+      font-size: 30px;
+      font-weight: 400;
+      color: #1c87c9;
+      }
+      p {
+      margin: 0 0 10px;
+      color: #1c87c9;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #000;
+      }
+      form {
+      padding: 25px;
+      margin: 25px;
+      box-shadow: 0 2px 5px #1c87c9; 
+      background: #000; 
+      }
+      .fas {
+      margin: 25px 10px 0;
+      font-size: 72px;
+      color: rgb(31, 28, 28);
+      }
+      .fa-envelope {
+      transform: rotate(-20deg);
+      }
+      .fa-at , .fa-mail-bulk{
+      transform: rotate(10deg);
+      }
+      input, textarea {
+      width: calc(100% - 18px);
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #1c87c9;
+      outline: none;
+      }
+      input::placeholder {
+      color: #000;
+      }
+      button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #1c87c9; 
+      font-size: 18px;
+      font-weight: 400;
+      color: rgb(255, 255, 255);
+      ali
+      }
+      button:hover {
+      background: #2371a0;
+      }    
+      @media (min-width: 568px) {
+      .main-block {
+      flex-direction: row;
+      }
+      .left-part, form {
+      width: 50%;
+      }
+      .fa-envelope {
+      margin-top: 0;
+      margin-left: 20%;
+      }
+      .fa-at {
+      margin-top: -10%;
+      margin-left: 65%;
+      }
+      .fa-mail-bulk {
+      margin-top: 2%;
+      margin-left: 28%;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block" id="create">
+      <div class="left-part">
+        <i class="fas fa-envelope"></i>
+        <i class="fas fa-at"></i>
+        <i class="fas fa-mail-bulk"></i>
+      </div>
+      <form action="/">
+        <h1>Create New Event</h1>
+        <div class="info">
+            <form id="eventform"></form>
+          <input class="fname" type="text" name="name" placeholder="Event name" id="name">
+          <input type="date" name="event date" placeholder="event date" id="date">
+          <input type="number" name="phone number" placeholder="Phone number to conatct" id="number">
+          <input type="time" name="time" placeholder="event time" id="time">
+        </div>
+        <p>Description</p>
+        <div>
+          <textarea rows="4"></textarea>
+        </div>
+        <button type="submit" href="/">Submit</button>
+      </form>
+    </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+        </section>
+        <section class="subscribe">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      }
+      h1 {
+      margin: 0 0 20px;
+      font-size: 50px;
+      font-weight: 400;
+      color: #ffffff;
+      position:relative;
+      text-align: center;
+      }
+      p {
+      margin: 0 0 5px;
+      color: #1c87c9;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 50vh;
+      background: #000;
+      }
+      form {
+      padding: 25px;
+      margin: 25px;
+      box-shadow: 0 2px 5px #1c87c9; 
+      background: #000; 
+      }
+      .fas {
+      margin: 25px 10px 0;
+      font-size: 72px;
+      color: rgb(31, 28, 28);
+      }
+      .fa-envelope {
+      transform: rotate(-20deg);
+      }
+      .fa-at , .fa-mail-bulk{
+      transform: rotate(10deg);
+      }
+      input, textarea {
+      width: calc(100% - 18px);
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #1c87c9;
+      outline: none;
+      }
+      input::placeholder {
+      color: #000;
+      }
+      button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #1c87c9; 
+      font-size: 18px;
+      font-weight: 400;
+      color: rgb(255, 255, 255);
+      }
+      button:hover {
+      background: #2371a0;
+      }    
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block" id="events">
+        <h1 class="gradient-subtext">Current Events</h1>
+       
+  </body>
+        </section>
+        </section>
+         <!-- <hr class="gradient"> -->
+        <!-- <hr> -->
+        <section class="attends">
+            <h2>Why attend?</h2>
+
+            <h4 class="text-gradient-purple">Learn from the best</h4>
+            <p>Three channels of content dedicated to developers, enterprise teams, and college students.</p>
+
+            <h4 class="text-gradient-purple">Get the latest</h4>
+            <p>New product announcements and deep dives.</p>
+
+            <h4 class="text-gradient-purple">Connect beyond content</h4>
+            <p>Networking and learning opportunities, from Workshops to mentoring sessions.</p>
+
+            <h4 class="text-gradient-purple">Have fun along the way</h4>
+            <p>Musical performances inspired by code and a few more surprises to come!</p>
+        </section>
+        <hr class="gradient" id="contact us">
+        <section class="sponsors">
+            <div class="container">
+                <h4>CONTACT US</h4>
+                <br>
+                <ul class="linear-list">
+                    <li>
+                        <a href="https://twitter.com/ieeeajcesb?t=26uXNAIxUELhJj5Ugtqowg&s=09">
+                            <img src="https://githubuniverse.com/assets/img/svgs/twitter.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/ieeeajcesb?utm_medium=copy_link">
+                            <img src="https://githubuniverse.com/assets/img/svgs/instagram.svg">
+                        </a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </section>
+       
+        <hr class="gradient">
+        <!-- <hr> -->
+      
+
+            
+        </section>
+    </body>
+</html>
